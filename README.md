@@ -92,7 +92,7 @@ Directory `bwtman` contains a prototype implementation of the following paper:
 
 * D. Belazzougui, F. Cunial (2017). [A framework for space-efficient string kernels](https://link.springer.com/article/10.1007/s00453-017-0286-4). Algorithmica, volume 79, pages 857–883.
 
-For now the program detects just all *minimal absent words* (MAWs) of a text, of any length, and scores them based on an IID or Markov model of the text. The program is space-efficient, since it is based on the Burrows-Wheeler transform. We are currently working on making it use multiple threads, and on supporting more string analysis algorithms with the same algorithmic framework, but this is still work in progress.
+For now the program detects just all *minimal absent words* (MAWs) of a text, of any length, and scores them based on an IID or Markov model of the text. A minimal absent word is a string that never appears in the input, but such that every one of its substrings appears (exactly) in the input. The program is space-efficient, since it is based on the Burrows-Wheeler transform. We are currently working on making it use multiple threads, and on supporting more string analysis algorithms with the same algorithmic framework, but this is still work in progress.
 
 To read representative examples of my coding style, I suggest looking at the following files:
 * [indexed_DNA5_seq.c](https://github.com/fcunial/portfolio/blob/master/bwtman/iterator/indexed_DNA5_seq.c)
