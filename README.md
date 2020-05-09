@@ -118,7 +118,7 @@ cmake -DCMAKE_BUILD_TYPE="Release" -DCMAKE_INSTALL_PREFIX="." ..
 make
 ```
 
-Then, let's edit the first line of file `Makefile` in the main directory of the project, `bwtman`: on the first line, let's specify in variable `CC` the path of a C compiler that supports OpenMP (in some systems, e.g. macOS, this is not the default C compiler). Then, just type `make` from directory `bwtman`.
+Then, let's edit the first line of file `Makefile` in directory `bwtman` (the main directory of the project): on the first line, let's specify in variable `CC` the path of a C compiler that supports OpenMP (in some systems, e.g. macOS, this is not the default C compiler: gcc would do). Then, let's just type `make` from directory `bwtman`.
 
 
 **Running**
