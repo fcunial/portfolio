@@ -82,3 +82,66 @@ tttgcgcctttgcgcctttgcgtttt f=4 4E0 1,218663E9 1,218663E9 69,81871E3 69,81871E3 4
 ccagctcggcgtttt f=7 6,986233E0 508,4655E0 507,4655E0 59,54219E0 59,54219E0 3,545272E3 59,54219E0 117,3325E-3 59,54219E0 59,54219E0 
 tcacccgcacaggagacgggtccagctcggcgtttt f=5 5E0 1,597327E15 1,597327E15 89,36798E6 89,36798E6 7,986635E15 89,36798E6 55,94845E-9 89,36798E6 89,36798E6 
 ```
+
+
+
+Example of C code
+------------
+
+Directory `bwtman` contains a prototype implementation of the following paper:
+
+* D. Belazzougui, F. Cunial (2017). [A framework for space-efficient string kernels](https://link.springer.com/article/10.1007/s00453-017-0286-4). Algorithmica, volume 79, pages 857–883.
+
+For now the program detects just all *minimal absent words* of a text, of any length, and scores them based on an IID or Markov model of the text. The program is space-efficient, since it is based on the Burrows-Wheeler transform. We are currently working on making it use multiple threads, and on supporting more string analysis algorithms with the same algorithmic framework, but this is still work in progress.
+
+To read representative examples of my coding style, I suggest looking at the following files:
+* [indexed_DNA5_seq.c](https://github.com/fcunial/portfolio/blob/master/bwtman/iterator/indexed_DNA5_seq.c)
+* [indexed_DNA5_seq.h](https://github.com/fcunial/portfolio/blob/master/bwtman/iterator/indexed_DNA5_seq.h)
+* [SLT_single_string.c](https://github.com/fcunial/portfolio/blob/master/bwtman/iterator/SLT_single_string.c)
+* [SLT_single_string.h](https://github.com/fcunial/portfolio/blob/master/bwtman/iterator/SLT_single_string.h)
+
+
+**Requirements**
+
+* A modern C compiler with support for OpenMP. The code was tested on GCC 9.2.0.
+* A 64-bit operating system. The code was tested on macOS 10.13.
+
+**Compiling**
+
+First, let's compile `libdivsufsort`, an external library that we use for constructing the Burrows-Wheeler Transform of the input text. Assuming the current directory is `bwtman`, do:
+
+```
+cd libdivsufsort
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE="Release" -DCMAKE_INSTALL_PREFIX="." ..
+make
+```
+
+Then, let's edit the first line of file `Makefile` in the main directory of the project, `bwtman`: on the first line, let's specify in variable `CC` the path of a C compiler that supports OpenMP (in some systems, e.g. macOS, this is not the default C compiler). Then, just type `make` from directory `bwtman`.
+
+
+**Running**
+
+Since this code is still a prototype, I created a test program with hardwired input arguments, to make running it easier. The program uses file `NC_021658.fna` included in the repository. 
+
+Example run using `nThreads` parallel threads (assuming the current directory is `surprisingStrings`):
+```
+java -classpath .:./commons-math3-3.5.jar TestDrive nThreads
+```
+
+This simple program builds the BWT of `NC_021658.fna` and prints to STDOUT all substrings whose exact frequency is at least 100 times greater than expected according to an IID model (the model can easily be made non-uniform, e.g. by making character probabilities match their frequencies in the input). Please interrupt the program with CTRL+C, because the list of surprising strings is very long.
+
+**Example output**
+
+In the output, each string is followed by its exact frequency (denoted by `f=`) and by the following, space-separated scores:
+* frequency-expectation
+* frequency/expectation
+* (frequency-expectation)/expectation
+* (frequency-expectation)/sqrt(expectation)
+* abs(frequency-expectation)/sqrt(expectation)
+* (frequency-expectation)*(frequency-expectation)/expectation;
+* (frequency-expectation)/sqrt(expectation*(1-probability))
+* expectation/sqrt(variance)
+* (frequency-expectation)/sqrt(variance)
+* abs((frequency-expectation)/sqrt(variance))
