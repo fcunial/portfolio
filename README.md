@@ -18,15 +18,14 @@ Requirements
 * A 64-bit Java compiler. The code was tested on javac 9.0.1.
 * A 64-bit operating system. The code was tested on macOS 10.13.
 
-Compiling:
+Compiling (assuming the current directory is `surprisingStrings`):
 ```
-cd surprisingStrings
 javac -classpath .:./commons-math3-3.5.jar *.java
 ```
 
 Since this code is still a prototype, I created a test program with hardwired input arguments, to make running it easier. The program uses file `NC_021658.fna` included in the repository.
 
-Example run using `nThreads` parallel threads:
+Example run using `nThreads` parallel threads (assuming the current directory is `surprisingStrings`):
 ```
 java -classpath .:./commons-math3-3.5.jar TestDrive nThreads
 ```
