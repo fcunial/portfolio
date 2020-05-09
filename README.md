@@ -104,6 +104,7 @@ To read representative examples of my coding style, I suggest looking at the fol
 **Requirements**
 
 * A modern C compiler with support for OpenMP. The code was tested on GCC 9.2.0.
+* The [cmake](http://www.cmake.org) build system.
 * A 64-bit operating system. The code was tested on macOS 10.13.
 
 **Compiling**
