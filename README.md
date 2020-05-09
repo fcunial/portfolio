@@ -146,14 +146,42 @@ The program prints to STDOUT a line with global statistics, followed by a histog
 * maximum length of an observed MAW
 * fraction of maximal repeats that are the infix of a MAW
 
-In the output, each string is followed by its exact frequency (denoted by `f=`) and by the following, space-separated scores:
-* frequency-expectation
-* frequency/expectation
-* (frequency-expectation)/expectation
-* (frequency-expectation)/sqrt(expectation)
-* abs(frequency-expectation)/sqrt(expectation)
-* (frequency-expectation)*(frequency-expectation)/expectation;
-* (frequency-expectation)/sqrt(expectation*(1-probability))
-* expectation/sqrt(variance)
-* (frequency-expectation)/sqrt(variance)
-* abs((frequency-expectation)/sqrt(variance))
+In the output file `HS22.fasta.maws.filter`, MAWs are represented in the following compact form: we print the maximal repeat *W* that is the infix of a MAW (or of possible many MAWs) just once; then we print, on each line, the characters *a* and *b* such that *aWb* is a MAW, followed by several statistical scores on *aWb* (the fourth of which is the one we filtered by in the input). Example output:
+
+```
+cattaattat
+c,t,3.65274,9.32778e-08,-1.91121,3,7.66091e-08,-1.73205,0.00694444,1e-12,
+ccattaattat
+g,a,0.863419,2.20486e-08,-0.929204,2,5.10728e-08,-1.41421,0.00591716,1e-13,
+tattaattat
+g,c,3.68685,9.41488e-08,-1.92012,2.34483,5.98784e-08,-1.53128,0.00694444,1e-12,
+agttaattat
+t,c,3.68685,9.41488e-08,-1.92012,2.48889,6.35572e-08,-1.57762,0.00694444,1e-12,
+acttaattat
+c,g,3.25666,8.31633e-08,-1.80462,2.625,6.7033e-08,-1.62019,0.00694444,1e-12,
+catttaattat
+a,c,0.96843,2.47302e-08,-0.984088,2,5.10728e-08,-1.41421,0.00591716,1e-13,
+ttatttaattat
+a,t,0.328702,8.39385e-09,-0.573325,2.26087,5.77344e-08,-1.50362,0.00510204,1e-14,
+tgtttaattat
+t,t,1.10414,2.81958e-08,-1.05078,2,5.10728e-08,-1.41421,0.00591716,1e-13,
+tattttaattat
+t,g,0.292735,7.47539e-09,-0.54105,2.12903,5.43678e-08,-1.45912,0.00510204,1e-14,
+aggtaattat
+t,t,3.72127,9.50278e-08,-1.92906,2.22222,5.67475e-08,-1.49071,0.00694444,1e-12,
+ggtgtaattat
+t,g,0.782503,1.99823e-08,-0.884592,2,5.10728e-08,-1.41421,0.00591716,1e-13,
+cactaattat
+a,c,3.23011,8.24853e-08,-1.79725,2.27586,5.81173e-08,-1.5086,0.00694444,1e-12,
+tgctaattat
+a,g,3.28707,8.39398e-08,-1.81303,2.05882,5.25749e-08,-1.43486,0.00694444,1e-12,
+agctaattat
+c,g,2.90353,7.41456e-08,-1.70397,2.88136,7.35794e-08,-1.69746,0.00694444,1e-12,
+cagctaattat
+g,t,0.768943,1.9636e-08,-0.876894,2.47059,6.30899e-08,-1.57181,0.00591716,1e-13,
+gcctaattat
+t,a,3.25666,8.31633e-08,-1.80462,2,5.10728e-08,-1.41421,0.00694444,1e-12,
+ttctaattat
+g,g,3.28343,8.38469e-08,-1.81202,2.27273,5.80372e-08,-1.50756,0.00694444,1e-12,
+t,c,3.6487,9.31746e-08,-1.91016,3,7.66091e-08,-1.73205,0.00694444,1e-12,
+```
