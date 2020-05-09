@@ -20,7 +20,7 @@ To read representative examples of my coding style, I suggest looking at the fol
 
 **Requirements**
 
-* A 64-bit Java compiler. The code was tested on javac 9.0.1.
+* A 64-bit Java compiler. The code was tested on Oracle's `javac 9.0.1`.
 * A 64-bit operating system. The code was tested on macOS 10.13.
 
 **Compiling**
