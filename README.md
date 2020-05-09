@@ -36,7 +36,7 @@ java -classpath .:./commons-math3-3.5.jar TestDrive nThreads
 
 This simple program builds the BWT of `NC_021658.fna` and prints to STDOUT all substrings whose exact frequency is at least 100 times bigger than expected according to an IID model (the model can easily be made non-uniform, e.g. by making character probabilities match their frequencies in the input). Please interrupt the program with CTRL+C, because the list of surprising strings is very long.
 
-In the output, each string is followed by its frequency and by the following scores:
+In the output, each string is followed by its frequency (denoted by `f=`) and by the following, space-separated scores:
 * frequency-expectation
 * frequency/expectation
 * (frequency-expectation)/expectation
