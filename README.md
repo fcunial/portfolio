@@ -146,7 +146,7 @@ The program prints to STDOUT a line with global statistics, followed by a histog
 * maximum length of an observed MAW
 * fraction of maximal repeats that are the infix of a MAW
 
-In the output file `HS22.fasta.maws.filter`, MAWs are represented in the following compact form: we print the maximal repeat *W* that is the infix of a MAW (or of possible many MAWs) just once; then we print, on each line, the characters *a* and *b* such that *aWb* is a MAW, followed by several statistical scores on *aWb* (the fourth of which is the one we filtered by in the input). Example output:
+In the output file `HS22.fasta.maws.filter`, MAWs are represented in the following compact form: we print the maximal repeat *W* that is the infix of a MAW (or possibly of many MAWs) just once; then we print, on each line, the characters *a* and *b* such that *aWb* is a MAW, followed by several statistical scores on *aWb* (the fourth of which is the one we filtered by in the input). Example output:
 
 ```
 cattaattat
