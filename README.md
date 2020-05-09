@@ -10,7 +10,7 @@ Directory `surprisingStrings` contains a prototype implementation of the followi
 
 * D. Belazzougui, F. Cunial (2015). [Space-efficient detection of unusual words](https://link.springer.com/chapter/10.1007/978-3-319-23826-5_22). SPIRE 2015, LNCS, volume 9309, pp 222-233.
 
-The program detects all substrings, of any length, that occur in a text more frequently or less frequently than expected according to an IID or a Markov model. The program can use multiple threads and is space-efficient since it is based on the Burrows-Wheeler transform.
+The program detects all substrings, of any length, that occur in a text more frequently or less frequently than expected, according to an IID or a Markov model. The program can use multiple threads, and it is space-efficient since it is based on the Burrows-Wheeler transform.
 
 Requirements
 ------------
