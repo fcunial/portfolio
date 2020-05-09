@@ -12,16 +12,17 @@ Directory `surprisingStrings` contains a prototype implementation of the followi
 
 The program detects all substrings, of any length, that occur in a text more frequently or less frequently than expected, according to an IID or a Markov model. The program can use multiple threads, and it is space-efficient since it is based on the Burrows-Wheeler transform.
 
-Requirements:
-
+*Requirements*
 * A 64-bit Java compiler. The code was tested on javac 9.0.1.
 * A 64-bit operating system. The code was tested on macOS 10.13.
 
-Compiling (assuming the current directory is `surprisingStrings`):
+*Compiling*
+Assuming the current directory is `surprisingStrings`:
 ```
 javac -classpath .:./commons-math3-3.5.jar *.java
 ```
 
+*Running*
 Since this code is still a prototype, I created a test program with hardwired input arguments, to make running it easier. The program uses file `NC_021658.fna` included in the repository.
 
 Example run using `nThreads` parallel threads (assuming the current directory is `surprisingStrings`):
