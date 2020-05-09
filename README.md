@@ -6,7 +6,7 @@ Coding portfolio
 Example of Java code
 ------------
 
-Directory surprisingStrings contains a prototype implementation of the following paper:
+Directory `surprisingStrings` contains a prototype implementation of the following paper:
 
 * D. Belazzougui, F. Cunial (2015). [Space-efficient detection of unusual words](https://link.springer.com/chapter/10.1007/978-3-319-23826-5_22). SPIRE 2015, LNCS, volume 9309, pp 222-233.
 
