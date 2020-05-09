@@ -1,4 +1,4 @@
-Coding portfolio
+Fabio Cunial's coding portfolio
 =========
 
 **Warning: this repository includes two large data files (total size approx. 27 MB), to make testing straightforward.**
