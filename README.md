@@ -12,6 +12,12 @@ Directory `surprisingStrings` contains a prototype implementation of the followi
 
 The program detects all substrings, of any length, that occur in a text more frequently or less frequently than expected, according to an IID or a Markov model. The program can use multiple threads, and it is space-efficient since it is based on the Burrows-Wheeler transform.
 
+To read representative examples of my coding style, I suggest looking at the following files:
+* [SubstringIterator.java](https://github.com/fcunial/portfolio/blob/master/surprisingStrings/SubstringIterator.java)
+* [Suffixes.java](https://github.com/fcunial/portfolio/blob/master/surprisingStrings/Suffixes.java)
+* [BorderSubstring.java](https://github.com/fcunial/portfolio/blob/master/surprisingStrings/BorderSubstring.java)
+
+
 **Requirements**
 
 * A 64-bit Java compiler. The code was tested on javac 9.0.1.
