@@ -6,7 +6,7 @@ Coding portfolio
 Example of Java code
 ------------
 
-Directory `surprisingStrings` contains a prototype implementation of the following paper:
+Directory `surprisingStrings` contains a prototype implementation (unpublished) of the following paper:
 
 * D. Belazzougui, F. Cunial (2015). [Space-efficient detection of unusual words](https://link.springer.com/chapter/10.1007/978-3-319-23826-5_22). SPIRE 2015, LNCS, volume 9309, pp 222-233.
 
@@ -88,7 +88,7 @@ tcacccgcacaggagacgggtccagctcggcgtttt f=5 5E0 1,597327E15 1,597327E15 89,36798E6 
 Example of C code
 ------------
 
-Directory `bwtman` contains a prototype implementation of the following paper:
+Directory `bwtman` contains a prototype implementation (unpublished) of the following paper:
 
 * D. Belazzougui, F. Cunial (2017). [A framework for space-efficient string kernels](https://link.springer.com/article/10.1007/s00453-017-0286-4). Algorithmica, volume 79, pages 857–883.
 
