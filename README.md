@@ -1,6 +1,8 @@
 Coding portfolio
 =========
 
+Warning: this repository includes some large (15MB) data files, to make testing straightforward.
+
 Example of Java code
 ------------
 
@@ -13,7 +15,7 @@ The program detects all substrings, of any length, that occur in a text more fre
 Requirements
 ------------
 
-* A modern, 64-bit Java compiler.
+* A 64-bit Java compiler. The code was tested on javac 9.0.1.
 * A 64-bit operating system. The code was tested on macOS 10.13.
 
 Compiling:
@@ -22,7 +24,9 @@ cd surprisingStrings
 javac -classpath .:./commons-math3-3.5.jar *.java
 ```
 
-Example run with T threads:
+Since this code is still a prototype, I created a test program with hardwired input arguments, to make running it easier. The program uses file `NC_021658.fna` included in the repository.
+
+Example run using T parallel threads:
 ```
 java -classpath .:./commons-math3-3.5.jar TestDrive T
 ```
