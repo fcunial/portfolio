@@ -26,8 +26,8 @@ javac -classpath .:./commons-math3-3.5.jar *.java
 
 Since this code is still a prototype, I created a test program with hardwired input arguments, to make running it easier. The program uses file `NC_021658.fna` included in the repository.
 
-Example run using T parallel threads:
+Example run using `nThreads` parallel threads:
 ```
-java -classpath .:./commons-math3-3.5.jar TestDrive T
+java -classpath .:./commons-math3-3.5.jar TestDrive nThreads
 ```
 
