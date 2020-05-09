@@ -108,7 +108,7 @@ To read representative examples of my coding style, I suggest looking at the fol
 
 **Compiling**
 
-First, let's compile `libdivsufsort`, an external library that we use for constructing the Burrows-Wheeler Transform of the input text. Assuming the current directory is `bwtman`, let's do:
+First, let's compile `libdivsufsort`, an [external library](https://github.com/y-256/libdivsufsort) that we use for constructing the Burrows-Wheeler Transform of the input text. Assuming the current directory is `bwtman`, let's do:
 
 ```
 cd libdivsufsort
