@@ -1,7 +1,7 @@
 Coding portfolio
 =========
 
-Warning: this repository includes some large (15MB) data files, to make testing straightforward.
+**Warning: this repository includes some large (15MB) data files, to make testing straightforward.**
 
 Example of Java code
 ------------
