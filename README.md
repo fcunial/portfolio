@@ -136,8 +136,8 @@ This simple program traverses the BWT index, and prints to the output file `HS22
 
 The program prints to STDOUT a line with global statistics, followed by a histogram of lengths of all selected minimal absent words. The statistics are:
 * length of the input sequence
-* minimum length of a MAW
-* maximum length of a MAW
+* minimum requested length of a MAW
+* maximum requested length of a MAW
 * time to load the index (seconds)
 * time to traverse the index and generate the output (seconds)
 * peak memory usage (bytes)
