@@ -27,10 +27,11 @@ javac -classpath .:./commons-math3-3.5.jar *.java
 
 **Running**
 
-Since this code is still a prototype, I created a test program with hardwired input arguments, to make running it easier. The program uses file `NC_021658.fna` included in the repository.
+Since this code is still a prototype, I created a test program with hardwired input arguments, to make running it easier. The program uses file `NC_021658.fna` included in the repository. 
 
 Example run using `nThreads` parallel threads (assuming the current directory is `surprisingStrings`):
 ```
 java -classpath .:./commons-math3-3.5.jar TestDrive nThreads
 ```
 
+This program builds the BWT of `NC_021658.fna` and outputs all substrings whose frequency is at least 100 times bigger than expected accouring to an IID model (the model can easily be made non-uniform, e.g. by getting making character probabilities match their frequencies in the input).
