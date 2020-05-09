@@ -138,8 +138,8 @@ The program prints to STDOUT a line with global statistics, then a histogram of 
 * length of the input sequence
 * minimum length of a MAW
 * maximum length of a MAW
-* time to load the index ()
-* time to traverse the index and generate the output ()
+* time to load the index (seconds)
+* time to traverse the index and generate the output (seconds)
 * peak memory usage (bytes)
 * number of MAWs selected			
 * minimum length of a selected MAW
